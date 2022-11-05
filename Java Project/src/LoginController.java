@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 
 public class LoginController {
     @FXML
@@ -16,6 +17,7 @@ public class LoginController {
     private TextField UserLogin;
     @FXML
     private Label WrongLabel;
+    Image Logo = new Image (getClass().getResourceAsStream("Project 3.png"));
 
     public void ButtonLogin(ActionEvent event)throws IOException{
         checkLogin();
@@ -24,8 +26,6 @@ public class LoginController {
     private void checkLogin()throws IOException{
         Main scene = new Main();
         if (UserLogin.getText().toString().equals("Ramenkuy") && PassLogin.getText().toString().equals("6969")) {
-            WrongLabel.setText("いただきます");
-
             scene.changeScene("Ramen.fxml");
         }
         else if(UserLogin.getText().isEmpty() && PassLogin.getText().isEmpty()){

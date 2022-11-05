@@ -26,7 +26,8 @@ public class MainController {
     Image Ramen5 = new Image (getClass().getResourceAsStream("Hakodate Ramen.jpg"));
     Image Ramen6 = new Image (getClass().getResourceAsStream("Wakayama Ramen.jpg"));
 
-    public void change(ActionEvent event){
+    public void UserCheckOut(ActionEvent event)throws IOException{
+        
         ToggleGroup group = new ToggleGroup();
         B1.setToggleGroup(group);
         B2.setToggleGroup(group);
@@ -65,8 +66,9 @@ public class MainController {
             LabelNama.setText("Wakayama Ramen");
             ImageRamen.setImage(Ramen6);
         }
-    }
-    public void UserCheckOut(ActionEvent event)throws IOException{
+        
+    }  
+    public void Change(ActionEvent event)throws IOException{
         Main scene = new Main();
         scene.changeScene("Pay.fxml");
     }
